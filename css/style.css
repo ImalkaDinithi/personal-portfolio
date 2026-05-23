@@ -69,6 +69,15 @@ section {
     height: 100%;
     padding: 10rem 9% 2rem;
     background: var(--bg-color);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+section.active {
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
 }
 
 .home {
