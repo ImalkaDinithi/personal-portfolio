@@ -370,10 +370,23 @@ section.active {
 
 .resume-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap: 2rem;
     height: 45rem;
     overflow: auto;
+}
+
+.resume-list::-webkit-scrollbar {
+    width: .7rem;
+}
+
+.resume-list::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 1rem;
+}
+
+.resume-list:hover::-webkit-scrollbar-thumb {
+    background: var(--main-color);
 }
 
 .resume-list .resume-item {
