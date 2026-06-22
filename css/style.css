@@ -432,6 +432,7 @@ section.active {
     margin-left: -2rem;
 }
 
+/* skills */
 .resume-detail.skills .resume-item {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     height: auto;
@@ -471,4 +472,26 @@ section.active {
     top: -0%;
     opacity: 1;
     transform: scale(1);
+}
+
+/* about me */
+.resume-detail.about .resume-list-1 {
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.resume-detail.about .resume-item {
+    height: auto;
+    padding: 0 0 .5rem;
+    background: transparent;
+}
+
+.resume-detail.about .resume-item p {
+    color: var(--main-color);
+}
+
+.resume-detail.about .resume-item p span {
+    color: var(--white-color);
+    margin-left: 1rem;
+    font-size: 1.7rem;
 }
