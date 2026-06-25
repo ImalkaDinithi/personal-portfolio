@@ -553,9 +553,9 @@ section.active {
     margin-right: 1.5rem;
 }
 
-.portfolio-box .live-github a:first-child i {
+/* .portfolio-box .live-github a:first-child i {
     transform: rotate(135deg);
-}
+} */
 
 .portfolio-box .live-github a span {
     position: absolute;
@@ -586,7 +586,7 @@ section.active {
     overflow: hidden;
 }
 
-.portfolio-carousel img-slide {
+.portfolio-carousel .img-slide {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
@@ -595,11 +595,11 @@ section.active {
     transition: .5s;
 }
 
-.portfolio-carousel img-item {
+.portfolio-carousel .img-item {
     height: inherit;
 }
 
-.portfolio-carousel img-item img {
+.portfolio-carousel .img-item img {
     display: block;
     width: 100%;
     height: 100%;
