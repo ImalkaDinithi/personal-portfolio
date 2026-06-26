@@ -19,7 +19,13 @@ resumeBtns.forEach((btn, idx) => {
 const arrowRight = document.querySelector('.portfolio-box .navigation .arrow-right');
 const arrowLeft = document.querySelector('.portfolio-box .navigation .arrow-left');
 
-let index=0;
+let index = 0;
+const maxIndex = 3;
+
+const updateNavigation = () => {
+    arrowLeft.classList.toggle('disabled', index === 0);
+    arrowRight.classList.toggle('disabled', index === maxIndex);
+};
 
 const activePortfolio = () => {
     const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
@@ -31,30 +37,22 @@ const activePortfolio = () => {
         detail.classList.remove('active');
     });
     portfolioDetails[index].classList.add('active');
-}
+
+    updateNavigation();
+};
 
 arrowRight.addEventListener('click', () => {
-    if (index < 4) {
+    if (index < maxIndex) {
         index++;
-        arrowLeft.classList.remove('disabled');
     }
-    else {
-        index = 5;
-        arrowRight.classList.add('disabled');
-    }
-
     activePortfolio();
 });
 
 arrowLeft.addEventListener('click', () => {
-    if (index > 1) {
+    if (index > 0) {
         index--;
-        arrowRight.classList.remove('disabled');
     }
-    else {
-        index = 0;
-        arrowLeft.classList.add('disabled');
-    }
-
     activePortfolio();
 });
+
+activePortfolio();
